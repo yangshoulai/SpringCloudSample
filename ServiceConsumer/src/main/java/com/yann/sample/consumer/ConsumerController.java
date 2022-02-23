@@ -28,7 +28,7 @@ public class ConsumerController {
   public ResponseEntity<ApiResponse<?>> getProviderNameByRestTemplate() {
     ApiResponse<?> response;
     try {
-      response = this.restTemplate.getForObject("http://service-provider/name", ApiResponse.class);
+      response = this.restTemplate.getForObject("http://test-service-provider/name", ApiResponse.class);
     } catch (RestClientException e) {
       response = ApiResponse.error(e.getMessage());
     }
